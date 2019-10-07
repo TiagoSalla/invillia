@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f024f168-2f13-441d-84fb-85e26921c51f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MemberDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TeamDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Member.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Team.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/teams_and_members_crud_jpa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/dao/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/domain/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/../teams_and_members_crud_jpa/src/main/java/domain/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teams_and_members_crud_jpa/target/classes/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../teams_and_members_crud_jpa/target/classes/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teams_and_members_crud_jpa/teams_and_members_crud_jpa.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="f024f168-2f13-441d-84fb-85e26921c51f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

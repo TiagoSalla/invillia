@@ -15,16 +15,16 @@ public class Application {
 
         System.out.println("-----------------------ERROS A PARTIR DAQUI-----------------------");
 
-        /*
-        //Test comands for teams CRUD
+/*
+        Test comands for teams CRUD
 
         TeamDAO teamDAO = new TeamDAO(entityManager);
 
-        teamDAO.insert(new Team("Babilonia"));
+        teamDAO.insert(new Team("Melbourne"));
 
         System.out.println(teamDAO.listAll());
 
-        Team team = teamDAO.findById(1L);
+        Team team = teamDAO.findById(3L);
 
         team.setName("Madonna");
         teamDAO.update(team);
@@ -33,19 +33,22 @@ public class Application {
         teamDAO.deleteById(2L);
 
         System.out.println(teamDAO.listAll());
+
         */
 
-        /*
         // Test comands for members CRUD
-
+        /*
         MemberDAO memberDAO = new MemberDAO(entityManager);
 
-        memberDAO.insert(new Member("Joaquim",1L));
+        memberDAO.insert(new Member("Jota", team));
         memberDAO.insert(new Member("Maria",1L));
 
         System.out.println(memberDAO.listAll());
 
-        Member member = memberDAO.findById(1L);
+        Member member = memberDAO.findById(3L);
+        System.out.println(member);
+
+        System.out.println(memberDAO.findAllByTeamId(3L));
 
         member.setName("Juan");
         memberDAO.update(member);

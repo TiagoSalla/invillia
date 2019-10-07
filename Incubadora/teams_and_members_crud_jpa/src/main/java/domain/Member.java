@@ -1,10 +1,15 @@
 package domain;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "member")
 public class Member {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -12,15 +17,24 @@ public class Member {
     @Column(name = "name", nullable = false, length = 255)
     private String name;
 
-    @Column(name = "team_id", nullable = false)
-    private long teamID;
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @JoinColumn(name = "team_id", nullable = false)
+    private Team team;
 
-    public Member(String name, long teamID) {
-        this.name = name;
-        this.teamID = teamID;
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false)
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updated_at", nullable = false)
+    private LocalDateTime updatedAt;
+
+    public Member() {
     }
 
-    public Member(){
+    public Member(String name, Team team) {
+        this.name = name;
+        this.team = team;
     }
 
     public long getId() {
@@ -39,12 +53,28 @@ public class Member {
         this.name = name;
     }
 
-    public long getTeamID() {
-        return teamID;
+    public Team getTeam() {
+        return team;
     }
 
-    public void setTeamID(long teamID) {
-        this.teamID = teamID;
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -52,7 +82,9 @@ public class Member {
         return "Member{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", teamID=" + teamID +
+                ", team=" + team +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 }

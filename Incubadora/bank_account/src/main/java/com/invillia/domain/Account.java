@@ -29,6 +29,9 @@ public class Account {
     @Column(name = "special_limit", nullable = false)
     private Double specialLimit = 0.00;
 
+    @Column(name = "available_special_limit", nullable = false)
+    private Double availableSpecialLimit = 0.00;
+
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @JoinColumn(name = "client_id", nullable = false)
     private Client client;
@@ -50,6 +53,7 @@ public class Account {
         this.type = type;
         this.balance = balance;
         this.specialLimit = specialLimit;
+        this.availableSpecialLimit = specialLimit;
         this.client = client;
     }
 
@@ -101,6 +105,14 @@ public class Account {
         this.specialLimit = specialLimit;
     }
 
+    public Double getAvailableSpecialLimit() {
+        return availableSpecialLimit;
+    }
+
+    public void setAvailableSpecialLimit(double availableSpecialLimit) {
+        this.availableSpecialLimit = availableSpecialLimit;
+    }
+
     public Client getClient() {
         return client;
     }
@@ -134,6 +146,7 @@ public class Account {
                 ", type='" + type + '\'' +
                 ", balance=" + balance +
                 ", specialLimit=" + specialLimit +
+                ", availableSpecialLimit=" + availableSpecialLimit +
                 ", client=" + client +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +

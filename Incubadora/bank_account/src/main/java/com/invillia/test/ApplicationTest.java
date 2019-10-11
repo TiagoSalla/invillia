@@ -33,7 +33,7 @@ public class ApplicationTest {
                     Menus.accountMenu(accountDAO, clientDAO);
                     break;
                 case 3:
-                    Menus.operationMenu();
+                    Menus.operationMenu(accountDAO, clientDAO);
                     break;
                 case 4:
                     Messages.showMessage("Saindo do sistema ...");

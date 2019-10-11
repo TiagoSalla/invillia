@@ -5,6 +5,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "client")
@@ -22,6 +23,9 @@ public class Client {
 
     @Column(name = "rg", nullable = false, length = 9)
     private String rg;
+
+    @OneToMany(mappedBy = "client")
+    private List<Account> accounts;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false)

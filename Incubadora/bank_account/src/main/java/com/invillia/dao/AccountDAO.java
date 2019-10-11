@@ -1,7 +1,6 @@
 package com.invillia.dao;
 
 import com.invillia.domain.Account;
-import com.invillia.domain.Client;
 import com.invillia.swing.Messages;
 
 import javax.persistence.EntityManager;

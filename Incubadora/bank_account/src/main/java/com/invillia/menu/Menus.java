@@ -3,8 +3,7 @@ package com.invillia.menu;
 import com.invillia.dao.*;
 import com.invillia.domain.*;
 import com.invillia.swing.Messages;
-
-import javax.swing.*;
+import com.invillia.validators.CpfValidator;
 
 public class Menus {
     public static void clientMenu(ClientDAO clientDAO){
@@ -15,19 +14,19 @@ public class Menus {
             switch (menuChosenOption){
                 case 1:
                     clientDAO.insert(new Client(
-                           Messages.daoStringInputMessage("Insira o nome do cliente:"),
-                           Messages.daoStringInputMessage("Insira o CPF do cliente:"),
-                           Messages.daoStringInputMessage("Insira o RG do cliente:")));
-                    Messages.showMessage("Cliente inserido com sucesso!");
+                        Messages.daoStringInputMessage("Insira o nome do cliente:"),
+                        CpfValidator.validateCpf(Messages.daoStringInputMessage("Insira o CPF do cliente:")),
+                        Messages.daoStringInputMessage("Insira o RG do cliente:")));
+                        Messages.showMessage("Cliente inserido com sucesso!");
                     break;
                 case 2:
                     clientDAO.listAll();
                     break;
                 case 3:
-                    clientDAO.listById(Messages.daoLongInputMessage("Digite o ID desejado:"));
+                    clientDAO.listById(Messages.daoLongInputMessage("Qual o ID do cliente?"));
                     break;
                 case 4:
-                    clientDAO.update(Messages.daoLongInputMessage("Digite o ID desejado:"));
+                    clientDAO.update(Messages.daoLongInputMessage("Qual o ID do cliente?"));
                     Messages.showMessage("Cliente alterado com sucesso!");
                     break;
                 case 5:

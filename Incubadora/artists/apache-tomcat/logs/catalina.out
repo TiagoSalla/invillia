@@ -1,0 +1,199 @@
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Oct-2019 16:40:06.225 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.27
+18-Oct-2019 16:40:06.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2019 09:57:22 UTC
+18-Oct-2019 16:40:06.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.27.0
+18-Oct-2019 16:40:06.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+18-Oct-2019 16:40:06.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-65-generic
+18-Oct-2019 16:40:06.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+18-Oct-2019 16:40:06.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+18-Oct-2019 16:40:06.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.4+11-post-Ubuntu-1ubuntu218.04.3
+18-Oct-2019 16:40:06.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+18-Oct-2019 16:40:06.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat
+18-Oct-2019 16:40:06.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat
+18-Oct-2019 16:40:06.245 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Oct-2019 16:40:06.245 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+18-Oct-2019 16:40:06.245 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Oct-2019 16:40:06.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/conf/logging.properties
+18-Oct-2019 16:40:06.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Oct-2019 16:40:06.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Oct-2019 16:40:06.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Oct-2019 16:40:06.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+18-Oct-2019 16:40:06.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+18-Oct-2019 16:40:06.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat
+18-Oct-2019 16:40:06.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat
+18-Oct-2019 16:40:06.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/temp
+18-Oct-2019 16:40:06.247 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+18-Oct-2019 16:40:06.784 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+18-Oct-2019 16:40:06.832 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+18-Oct-2019 16:40:06.839 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1,144] milliseconds
+18-Oct-2019 16:40:06.943 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Oct-2019 16:40:06.943 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.27]
+18-Oct-2019 16:40:06.953 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT]
+18-Oct-2019 16:40:07.390 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT] has finished in [438] ms
+18-Oct-2019 16:40:07.391 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/manager]
+18-Oct-2019 16:40:07.458 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/manager] has finished in [66] ms
+18-Oct-2019 16:40:07.458 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/docs]
+18-Oct-2019 16:40:07.488 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/docs] has finished in [30] ms
+18-Oct-2019 16:40:07.489 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/host-manager]
+18-Oct-2019 16:40:07.522 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/host-manager] has finished in [34] ms
+18-Oct-2019 16:40:07.523 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/examples]
+18-Oct-2019 16:40:08.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/examples] has finished in [490] ms
+18-Oct-2019 16:40:08.020 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Oct-2019 16:40:08.062 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+18-Oct-2019 16:40:08.078 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1,238] milliseconds
+18-Oct-2019 16:57:18.312 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 16:57:18.388 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 16:57:18.473 SEVERE [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Error deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:978)
+		at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1849)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+		at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:773)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:427)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1620)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:305)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1151)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1353)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1357)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1335)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: Servlet mapping specifies an unknown servlet name [indexServelet]
+		at org.apache.catalina.core.StandardContext.addServletMappingDecoded(StandardContext.java:3174)
+		at org.apache.catalina.Context.addServletMappingDecoded(Context.java:881)
+		at org.apache.catalina.startup.ContextConfig.configureContext(ContextConfig.java:1391)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1174)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:774)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:301)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5051)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 25 more
+18-Oct-2019 16:57:18.477 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [89] ms
+18-Oct-2019 16:58:58.500 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 16:58:58.526 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 16:58:58.592 SEVERE [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Error deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:978)
+		at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1849)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+		at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:773)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:427)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1620)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:305)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1151)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1353)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1357)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1335)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: Servlet mapping specifies an unknown servlet name [indexServelet]
+		at org.apache.catalina.core.StandardContext.addServletMappingDecoded(StandardContext.java:3174)
+		at org.apache.catalina.Context.addServletMappingDecoded(Context.java:881)
+		at org.apache.catalina.startup.ContextConfig.configureContext(ContextConfig.java:1391)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1174)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:774)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:301)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5051)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 25 more
+18-Oct-2019 16:58:58.593 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [67] ms
+18-Oct-2019 16:59:38.601 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 16:59:38.614 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 16:59:38.645 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 16:59:38.647 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [33] ms
+18-Oct-2019 17:00:58.663 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:00:58.684 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:00:58.722 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:00:58.728 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [43] ms
+18-Oct-2019 17:02:28.759 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:02:28.777 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:02:28.834 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:02:28.836 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [60] ms
+18-Oct-2019 17:04:28.863 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:04:28.874 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:04:28.946 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:04:28.949 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [74] ms
+18-Oct-2019 17:05:08.957 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:05:08.972 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:05:09.024 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:05:09.027 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [55] ms
+18-Oct-2019 17:05:29.032 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:05:29.043 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:05:29.072 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:05:29.075 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [32] ms
+18-Oct-2019 17:06:49.089 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:06:49.100 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:06:49.136 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:06:49.138 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [38] ms
+18-Oct-2019 17:12:09.188 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:12:09.212 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:12:09.289 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:12:09.295 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [84] ms
+18-Oct-2019 17:16:19.338 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:16:19.352 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:16:19.399 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:16:19.401 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [49] ms
+18-Oct-2019 17:18:19.430 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:18:19.442 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:18:19.474 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:18:19.476 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [34] ms
+18-Oct-2019 17:20:29.497 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:20:29.521 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:20:29.574 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:20:29.580 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [58] ms
+18-Oct-2019 17:21:39.590 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:21:39.604 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:21:39.646 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:21:39.648 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [44] ms
+18-Oct-2019 17:22:29.657 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:22:29.672 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:22:29.694 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:22:29.696 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [24] ms
+18-Oct-2019 17:22:59.702 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:22:59.712 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:22:59.754 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:22:59.757 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [45] ms
+18-Oct-2019 17:25:49.789 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:25:49.802 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:25:49.830 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:25:49.832 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [30] ms
+18-Oct-2019 17:26:29.838 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+18-Oct-2019 17:26:29.846 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war]
+18-Oct-2019 17:26:29.872 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2019 17:26:29.874 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/incubadora/IdeaProjects/Invillia/Incubadora/artists/apache-tomcat/webapps/ROOT.war] has finished in [27] ms

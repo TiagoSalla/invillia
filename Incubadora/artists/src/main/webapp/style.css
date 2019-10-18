@@ -1,0 +1,14 @@
+body {
+    background-color: #e6f7ff;
+}
+
+h1{
+    color: #ff3399;
+    font-family: Times New Roman, Times, serif;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 72px;
+    margin: 0 0 24px;
+    text-align: center;
+    text-transform: uppercase;
+}

@@ -16,7 +16,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <title>Invillia | Teams & Members</title>
+    <link rel="icon" type="image/ico" th:href="@{/images/hunter-logo.png}"/>
+    <title>Genei Ryodan</title>
 </head>
 
 <body>
@@ -30,15 +31,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Teams</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" th:href="@{/teams}">List</a>
-                            <a class="dropdown-item" th:href="@{/teams/signup}">Add</a>
+                            <a class="dropdown-item" th:href="@{/teams}"><i class="fa fa-list" aria-hidden="true"></i> List</a>
+                            <a class="dropdown-item" th:href="@{/teams/signup}"><i class="fa fa-user-plus" aria-hidden="true"></i> Add</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Members</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" th:href="@{/members}">List</a>
-                            <a class="dropdown-item" th:href="@{/members/signup}">Add</a>
+                            <a class="dropdown-item" th:href="@{/members}"><i class="fa fa-list" aria-hidden="true"></i> List</a>
+                            <a class="dropdown-item" th:href="@{/members/signup}"><i class="fa fa-user-plus" aria-hidden="true"></i> Add</a>
                         </div>
                     </li>
                 </ul>

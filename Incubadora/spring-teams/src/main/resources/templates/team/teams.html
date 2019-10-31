@@ -9,7 +9,10 @@
             <div th:switch="${teams}" class="container">
                 <div>
                     <table class="table table-light table-responsive-sm">
-                        <thead class="thead-light">
+                        <thead style="background-color: black; color: white;">
+                            <th colspan="5" style="text-align: center; font-size: 2em;">Teams</th>
+                        </thead>
+                        <thead style="background-color: #BF244E; color: white;">
                             <th>#</th>
                             <th>Team Name</th>
                             <th>List Members</th>
@@ -25,7 +28,7 @@
                             <td th:text="${team.id}"></td>
                             <td th:text="${team.name}"></td>
                             <td><a th:href="@{/members/list-members/{id}(id=${team.id})}" class="btn btn-primary"><i
-                                    class="fa fa-users"></i></a></td>
+                                    class="fa fa-list"></i></a></td>
                             <td><a th:href="@{/teams/edit/{id}(id=${team.id})}" class="btn btn-primary"><i
                                     class="fas fa-user-edit"></i></a></td>
                             <td><a th:href="@{/teams/delete/{id}(id=${team.id})}" class="btn btn-primary"><i

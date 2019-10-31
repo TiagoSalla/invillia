@@ -3,7 +3,39 @@
     height: 40%;
 }
 
+.btn-primary{
+    background-color: #FF6965;
+    border-color: #FF6965;
+}
+
+.btn-primary:hover{
+    background-color: #FF5A4D;
+    border-color: #FF5A4D;
+}
+
+.table{
+    
+}
+
 header{
     height: 20%;
     background-color: #422626;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+}
+
+main{
+    margin-top: 1%;
+}
+
+.dropdown-item:hover{
+    background-color: #FFBAA8;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: #FF6965;
 }

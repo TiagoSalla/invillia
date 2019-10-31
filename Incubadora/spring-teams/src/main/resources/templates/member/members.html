@@ -9,17 +9,15 @@
         <div th:switch="${members}" class="container">
             <div>
                 <table class="table table-light table-responsive-sm">
-                    <thead class="thead-light">
-                    <th>#</th>
-                    <th>Member Name</th>
-                    <th>Member Team</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                    <!--                    <th>-->
-                    <!--                        <a th:href="@{/create-user}" class="btn btn-primary">-->
-                    <!--                            <i class="fa fa-user-plus" aria-hidden="true"></i>-->
-                    <!--                        </a>-->
-                    <!--                    </th>-->
+                    <thead style="background-color: black; color: white;">
+                        <th colspan="5" style="text-align: center; font-size: 2em;">Members</th>
+                    </thead>
+                    <thead style="background-color: #BF244E; color: white;">
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Team</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </thead>
                     <tbody>
                     <tr th:if="${members.empty}">

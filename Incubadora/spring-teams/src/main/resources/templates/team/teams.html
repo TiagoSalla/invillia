@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: header"></head>
+
+<body>
+    <div>
+        <main>
+            <div th:switch="${teams}" class="container">
+                <div>
+                    <table class="table table-light table-responsive-sm">
+                        <thead class="thead-light">
+                            <th>#</th>
+                            <th>Team Name</th>
+                            <th>List Members</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody>
+                        <tr th:if="${teams.empty}">
+                            <td colspan="5" align="center">No teams found!</td>
+                        </tr>
+
+                        <tr th:each="team : ${teams}">
+                            <td th:text="${team.id}"></td>
+                            <td th:text="${team.name}"></td>
+                            <td><a th:href="@{/members/list-members/{id}(id=${team.id})}" class="btn btn-primary"><i
+                                    class="fa fa-users"></i></a></td>
+                            <td><a th:href="@{/teams/edit/{id}(id=${team.id})}" class="btn btn-primary"><i
+                                    class="fas fa-user-edit"></i></a></td>
+                            <td><a th:href="@{/teams/delete/{id}(id=${team.id})}" class="btn btn-primary"><i
+                                    class="fas fa-user-times"></i></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                        <a th:href="@{/teams/signup}" class="btn btn-primary">
+                            <i class="fa fa-user-plus"></i>
+                        </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

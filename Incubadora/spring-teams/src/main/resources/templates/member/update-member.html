@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: header"></head>
+
+<body>
+<div class="container my-5">
+    <h2 class="mb-5" style="color: white">Update Member</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="#" th:action="@{/members/update/{id}(id=${member.id})}" th:object="${member}" method="post">
+                <div class="row form-group">
+                    <div class="form-group col-md-6">
+                        <label for="name" class="col-form-label" style="color:white;">Name</label>
+                        <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Insert new name">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <select class="form-control" th:field="*{team}">
+                            <option th:value="${member.team.id}" th:text="${member.team.name}"></option>
+                            <option th:each="team : ${teams}" th:value="${team.id}" th:text="${team.name}">
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-primary" value="Update">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: header"></head>
+
+<body>
+    <div>
+        <main>
+
+            <div class="card card-option">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="padding-bottom: 5rem;">Choose some option</h5>
+                    <a th:href="@{/teams}" class="btn btn-primary">Teams</a>
+                    <a th:href="@{/members}" class="btn btn-primary">Members</a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

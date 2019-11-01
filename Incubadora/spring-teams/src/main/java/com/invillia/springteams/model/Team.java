@@ -4,6 +4,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class Team {
     private Long id;
 
     @Column(nullable = false, length = 255)
+    @NotBlank(message = "Please, insert a name")
     private String name;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.REMOVE)

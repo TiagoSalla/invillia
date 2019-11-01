@@ -1,19 +1,20 @@
 package com.invillia.springteams.controller;
 
+import com.invillia.springteams.exception.ActionNotPermitedException;
 import com.invillia.springteams.model.Member;
 import com.invillia.springteams.model.Team;
 import com.invillia.springteams.repository.TeamRepository;
 import com.invillia.springteams.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -77,5 +78,10 @@ public class TeamController {
         teamService.insert(team);
         model.addAttribute("teams", teamService.findAll());
         return "redirect:/teams";
+    }
+
+    @ExceptionHandler(ActionNotPermitedException.class)
+    public void exceptionHandler(HttpServletResponse response, Exception e) throws IOException {
+        response.sendError(HttpStatus.NOT_ACCEPTABLE.value(), e.getMessage());
     }
 }

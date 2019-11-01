@@ -1,19 +1,20 @@
 package com.invillia.springteams.controller;
 
+import com.invillia.springteams.exception.ActionNotPermitedException;
 import com.invillia.springteams.model.Member;
 import com.invillia.springteams.model.Team;
 import com.invillia.springteams.service.MemberService;
 import com.invillia.springteams.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/")
@@ -34,11 +35,11 @@ public class MemberController {
     }
 
 
-//    @GetMapping("/members/{id}")
-//    public String listMembers(@PathVariable("id") long id, Model model){
-//        model.addAttribute("teams", memberService.findAllMembers(id));
-//        return "members";
-//    }
+    @GetMapping("/members/list-members/{id}")
+    public String listMembers(@PathVariable("id") long id, Model model){
+        model.addAttribute("members", memberService.findAllMembers(id));
+        return "member/members";
+    }
 
     @GetMapping("/members/delete/{id}")
     public String delete(@PathVariable("id") long id, Model model){
@@ -81,5 +82,10 @@ public class MemberController {
         memberService.insert(member);
         model.addAttribute("members", memberService.findAll());
         return "redirect:/members";
+    }
+
+    @ExceptionHandler(ActionNotPermitedException.class)
+    public void exceptionHandler(HttpServletResponse response, Exception e) throws IOException {
+        response.sendError(HttpStatus.NOT_ACCEPTABLE.value(), e.getMessage());
     }
 }

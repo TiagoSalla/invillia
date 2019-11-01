@@ -4,33 +4,33 @@
 <head th:replace="header :: header"></head>
 
 <body>
-    <div>
-        <main>
+<div>
+    <main>
 
-            <div class="card-deck" style="margin: 2rem">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Teams</h5>
-                        <p class="card-text">
-                            Here you will have a list of existing teams, as well as the option to change their names,
-                            delete them and list their members, and add new teams.
-                        </p>
-                        <a th:href="@{/teams}" class="btn btn-primary">Go to teams</a>
-                    </div>
-                </div>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Members</h5>
-                        <p class="card-text">
-                            Here you will have a listing of existing members, as well as the option to change their
-                            names and teams and delete them, and add new members.</p>
-                        <a th:href="@{/members}" class="btn btn-primary">Go to members</a>
-                    </div>
+        <div class="card-deck" style="margin: 2rem">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Teams</h5>
+                    <p class="card-text">
+                        Here you will have a list of existing teams, as well as the option to change their names,
+                        delete them and list their members, and add new teams.
+                    </p>
+                    <a th:href="@{/teams}" class="btn btn-primary">Go to teams</a>
                 </div>
             </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Members</h5>
+                    <p class="card-text">
+                        Here you will have a listing of existing members, as well as the option to change their
+                        names and teams and delete them, and add new members.</p>
+                    <a th:href="@{/members}" class="btn btn-primary">Go to members</a>
+                </div>
+            </div>
+        </div>
 
-        </main>
-    </div>
+    </main>
+</div>
 </body>
 
 </html>

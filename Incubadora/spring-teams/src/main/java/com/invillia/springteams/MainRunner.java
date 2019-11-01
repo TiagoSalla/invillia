@@ -24,10 +24,6 @@ public class MainRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Team team = new Team("Koléia");
-        teamService.insert(team);
 
-        Member member = new Member("Tiago", team);
-        memberService.insert(member);
     }
 }

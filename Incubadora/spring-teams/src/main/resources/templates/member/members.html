@@ -8,7 +8,7 @@
     <main>
         <div th:switch="${members}" class="container">
             <div>
-                <table class="table table-striped table-responsive-sm" >
+                <table class="table table-striped table-responsive-sm">
                     <thead style="background-color: black; color: white;">
                     <tr>
                         <th colspan="5" style="text-align: center; font-size: 2em;">Members
@@ -20,11 +20,11 @@
                     </thead>
                     <thead style="background-color: #BF244E; color: white;">
                     <thead style="background-color: #BF244E; color: white;">
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Team</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Team</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                     </thead>
                     <tbody>
                     <tr th:if="${members.empty}">

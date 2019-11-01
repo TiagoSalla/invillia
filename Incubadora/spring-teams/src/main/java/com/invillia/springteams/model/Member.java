@@ -4,6 +4,9 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,10 +17,12 @@ public class Member {
     private Long id;
 
     @Column(nullable = false, length = 255)
+    @NotBlank(message = "Please, insert a name")
     private String name;
 
     @ManyToOne
     @JoinColumn(name = "team_id", nullable = false)
+    @NotNull(message = "Please, select a team")
     private Team team;
 
     @CreationTimestamp

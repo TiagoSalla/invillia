@@ -1,11 +1,8 @@
 package com.invillia.springteams.service;
 
-import com.invillia.springteams.model.Member;
+import com.invillia.springteams.exception.TeamNotFoundException;
 import com.invillia.springteams.model.Team;
-import com.invillia.springteams.repository.MemberRepository;
 import com.invillia.springteams.repository.TeamRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -30,18 +27,18 @@ public class TeamService {
     }
 
     public Team findById(Long id){
-        return teamRepository.findById(id).get();
+        return teamRepository.findById(id).orElseThrow(() -> new TeamNotFoundException(String.valueOf(id)));
     }
 
     @Transactional
     public void update(Long id){
         Team team = findById(id);
-        //Inserir futuros métodos
         teamRepository.save(team);
     }
 
     @Transactional
     public void delete(Long id) {
-        teamRepository.deleteById(id);
+        Team team = findById(id);
+        teamRepository.delete(team);
     }
 }

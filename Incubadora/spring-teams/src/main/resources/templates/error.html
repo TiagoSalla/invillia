@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: header"></head>
+
+<body>
+<div class="container my-5" align="center">
+    <div class="card text-white bg-danger mb-3 text-center" style="max-width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title" th:text="${message}"></h5>
+            <p class="card-text">The team id you want was not found. Please, make sure it is correct.</p>
+            <a th:href="@{/}" class="btn btn-primary">Return to Home</a>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

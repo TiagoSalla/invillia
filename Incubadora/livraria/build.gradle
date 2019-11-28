@@ -1,0 +1,31 @@
+plugins {
+    id "war"
+    id "java"
+}
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "javax.servlet:javax.servlet-api:3.1.0"
+    implementation "org.postgresql:postgresql:42.2.8"
+}
+
+task cleanServer(type: Delete) {
+    delete fileTree("apache-tomcat/webapps") {
+        include "ROOT*"
+    }
+}
+
+task copyWar(type: Copy) {
+    from "$buildDir/libs/ROOT.war"
+    into "apache-tomcat/webapps"
+}
+
+war {
+    archiveName = "ROOT.war"
+    webAppDirName = "src/main/webapp"
+}

@@ -6,6 +6,8 @@ function Menu() {
     return (
         <div>
             <Link to={"/people"}>People</Link>
+            <br />
+            <Link to={"/accounts"}>Accounts</Link>
         </div>
     );
 }

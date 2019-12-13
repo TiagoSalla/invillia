@@ -66,8 +66,8 @@ class NewPerson extends Component {
                     <Field name="rg" label="RG" value={person.rg} errors={errors["rg"]} onChange={this.change}/>
 
                     <div>
-                        <Link to="/people">Voltar</Link>
-                        <button type="submit">Salvar</button>
+                        <Link to="/people">Go Back</Link>
+                        <button type="submit">Save</button>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,7 @@
 package com.invillia.bank_api.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.invillia.bank_api.enums.AccountType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -15,6 +17,7 @@ public class Account {
     private Long id;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "person_id", nullable = false)
     private Person person;
 
@@ -34,9 +37,6 @@ public class Account {
     @Column(nullable = false)
     private Double specialLimit;
 
-    @Column(nullable = false)
-    private Double availableSpecialLimit;
-
     @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime createdAt;
@@ -55,7 +55,6 @@ public class Account {
         this.accountType = accountType;
         this.balance = 0.00;
         this.specialLimit = specialLimit;
-        this.availableSpecialLimit = specialLimit;
     }
 
     public Long getId() {
@@ -114,14 +113,6 @@ public class Account {
         this.specialLimit = specialLimit;
     }
 
-    public Double getAvailableSpecialLimit() {
-        return availableSpecialLimit;
-    }
-
-    public void setAvailableSpecialLimit(Double availableSpecialLimit) {
-        this.availableSpecialLimit = availableSpecialLimit;
-    }
-
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -142,13 +133,11 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "id=" + id +
-                ", person=" + person +
                 ", number=" + number +
                 ", agency=" + agency +
                 ", accountType=" + accountType +
                 ", balance=" + balance +
                 ", specialLimit=" + specialLimit +
-                ", availableSpecialLimit=" + availableSpecialLimit +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';

@@ -1,6 +1,8 @@
 package com.invillia.bank_api.controller;
 
 import com.invillia.bank_api.domain.request.AccountRequest;
+import com.invillia.bank_api.domain.request.DepositRequest;
+import com.invillia.bank_api.domain.request.WithdrawRequest;
 import com.invillia.bank_api.domain.response.AccountResponse;
 import com.invillia.bank_api.service.AccountService;
 import org.springframework.http.HttpEntity;
@@ -41,6 +43,11 @@ public class AccountController {
         return accountService.findById(id);
     }
 
+    @GetMapping("/person/{id}")
+    public List<AccountResponse> findByPersonId(@PathVariable final Long id){
+        return accountService.findAccountByPersonId(id);
+    }
+
     @DeleteMapping("/{id}")
     public HttpEntity<?> deleteById(@PathVariable final Long id){
         accountService.deleteById(id);
@@ -51,6 +58,20 @@ public class AccountController {
     @PutMapping("/{id}")
     public HttpEntity<?> update(@PathVariable final Long id, @Valid @RequestBody AccountRequest accountRequest){
         accountService.update(id, accountRequest);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}/deposits")
+    public HttpEntity<?> deposit(@PathVariable final Long id, @Valid @RequestBody DepositRequest depositRequest){
+        accountService.deposit(id, depositRequest);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}/withdraws")
+    public HttpEntity<?> withdraw(@PathVariable final Long id, @Valid @RequestBody WithdrawRequest withdrawRequest){
+        accountService.withdraw(id, withdrawRequest);
 
         return ResponseEntity.noContent().build();
     }

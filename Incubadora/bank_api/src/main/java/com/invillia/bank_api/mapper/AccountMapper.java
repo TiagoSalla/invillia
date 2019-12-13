@@ -25,7 +25,6 @@ public class AccountMapper {
         accountResponse.setAccountType(account.getAccountType());
         accountResponse.setBalance(account.getBalance());
         accountResponse.setSpecialLimit(account.getSpecialLimit());
-        accountResponse.setAvailableSpecialLimit(account.getAvailableSpecialLimit());
         accountResponse.setCreatedAt(account.getCreatedAt().format(formatter));
         accountResponse.setUpdatedAt(account.getUpdatedAt().format(formatter));
 
@@ -45,7 +44,6 @@ public class AccountMapper {
         account.setAgency(accountRequest.getAgency());
         account.setBalance(0.00);
         account.setSpecialLimit(accountRequest.getSpecialLimit());
-        account.setAvailableSpecialLimit(accountRequest.getSpecialLimit());
 
         return account;
     }

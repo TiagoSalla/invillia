@@ -20,8 +20,6 @@ public class AccountResponse {
 
     private Double specialLimit;
 
-    private Double availableSpecialLimit;
-
     private String createdAt;
 
     private String updatedAt;
@@ -88,14 +86,6 @@ public class AccountResponse {
 
     public void setSpecialLimit(Double specialLimit) {
         this.specialLimit = specialLimit;
-    }
-
-    public Double getAvailableSpecialLimit() {
-        return availableSpecialLimit;
-    }
-
-    public void setAvailableSpecialLimit(Double availableSpecialLimit) {
-        this.availableSpecialLimit = availableSpecialLimit;
     }
 
     public String getCreatedAt() {

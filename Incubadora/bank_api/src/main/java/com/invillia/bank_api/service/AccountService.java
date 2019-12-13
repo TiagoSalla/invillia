@@ -2,6 +2,8 @@ package com.invillia.bank_api.service;
 
 import com.invillia.bank_api.domain.Account;
 import com.invillia.bank_api.domain.request.AccountRequest;
+import com.invillia.bank_api.domain.request.DepositRequest;
+import com.invillia.bank_api.domain.request.WithdrawRequest;
 import com.invillia.bank_api.domain.response.AccountResponse;
 import com.invillia.bank_api.enums.AccountType;
 import com.invillia.bank_api.exception.InvalidValueException;
@@ -39,6 +41,13 @@ public class AccountService {
     @Transactional(readOnly = true)
     public List<AccountResponse> findAll(){
         List<Account> accounts = accountRepository.findAll();
+
+        return accountMapper.accountToAccountResponse(accounts);
+    }
+
+    @Transactional(readOnly = true)
+    public List<AccountResponse> findAccountByPersonId(final Long id){
+        List<Account> accounts = accountRepository.findByPerson_Id(id);
 
         return accountMapper.accountToAccountResponse(accounts);
     }
@@ -98,4 +107,30 @@ public class AccountService {
         accountRepository.save(account);
     }
 
+    @Transactional
+    public void deposit(final Long id, final DepositRequest depositRequest){
+        Account account = accountRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Account not found!"));
+
+        account.setBalance(account.getBalance() + depositRequest.getValue());
+        accountRepository.save(account);
+    }
+
+    @Transactional
+    public void withdraw(final Long id, final WithdrawRequest withdrawRequest) {
+        Account account = accountRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Account not Found!"));
+
+        Double balance = account.getBalance();
+        Double specialLimit = account.getSpecialLimit();
+        Double value = withdrawRequest.getValue();
+
+        if (value <= balance + specialLimit) {
+            balance -= value;
+            account.setBalance(balance);
+            accountRepository.save(account);
+        } else {
+            throw new InvalidValueException("Insufficient funds!");
+        }
+    }
 }

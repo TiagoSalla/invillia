@@ -9,6 +9,8 @@ import ListAccounts from "../pages/accounts/ListAccounts"
 import NewAccount from "../pages/accounts/NewAccount"
 import Operations from "../pages/accounts/Operations"
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import NotFound from "../pages/NotFound"
 import Menu from "../pages/Menu"
 
@@ -16,7 +18,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <BrowserRouter>
         <Switch>
           <Route path={"/"} exact component={Menu}/>

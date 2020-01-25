@@ -1,4 +1,13 @@
 package com.invillia.bank_api;
 
-public class ApplicationTests {
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
 }

@@ -1,5 +1,10 @@
 package com.invillia.bank_api.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.UniqueElements;
@@ -8,7 +13,10 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
     @Id
@@ -24,7 +32,9 @@ public class Person {
     @Column(nullable = false, length = 9)
     private String rg;
 
-    @OneToMany(mappedBy = "person", cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    @ToString.Exclude
+    @OneToMany(mappedBy = "person", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private List<Account> accounts;
 
     @CreationTimestamp
@@ -34,82 +44,4 @@ public class Person {
     @UpdateTimestamp
     @Column(nullable = false)
     private LocalDateTime updatedAt;
-
-    public Person() {
-    }
-
-    public Person(String name, String cpf, String rg) {
-        this.name = name;
-        this.cpf = cpf;
-        this.rg = rg;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
-    public List<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", rg='" + rg + '\'' +
-                ", accounts=" + accounts +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                '}';
-    }
 }

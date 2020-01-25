@@ -1,7 +1,14 @@
 package com.invillia.bank_api.domain.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.validation.constraints.NotNull;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class AccountRequest {
 
     private Long personId;
@@ -16,45 +23,5 @@ public class AccountRequest {
 
     @NotNull(message = "This field cannot be Null!")
     private Double specialLimit;
-
-    public Long getPersonId() {
-        return personId;
-    }
-
-    public void setPersonId(Long personId) {
-        this.personId = personId;
-    }
-
-    public Long getNumber() {
-        return number;
-    }
-
-    public void setNumber(Long number) {
-        this.number = number;
-    }
-
-    public Long getAgency() {
-        return agency;
-    }
-
-    public void setAgency(Long agency) {
-        this.agency = agency;
-    }
-
-    public String getAccountType() {
-        return accountType;
-    }
-
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
-
-    public Double getSpecialLimit() {
-        return specialLimit;
-    }
-
-    public void setSpecialLimit(Double specialLimit) {
-        this.specialLimit = specialLimit;
-    }
 
 }

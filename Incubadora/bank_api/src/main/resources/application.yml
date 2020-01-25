@@ -1,9 +1,16 @@
-spring.datasource.url=jdbc:postgresql://localhost:5432/bank_api
-spring.datasource.username=tiago
-spring.datasource.password=123123
-spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL10Dialect
-
-spring.jpa.hibernate.ddl-auto=update
-
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+spring:
+  datasource:
+    url: jdbc:h2:file:~/db/bank_api
+    #    url: jdbc:postgresql:/localhost:5432/bank_api
+    username: tiago
+    password: 123123
+  jpa:
+    show-sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    #    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: update

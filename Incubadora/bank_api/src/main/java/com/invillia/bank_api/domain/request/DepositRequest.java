@@ -1,8 +1,15 @@
 package com.invillia.bank_api.domain.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class DepositRequest {
 
     @NotNull(message = "This field cannot be Null!")
@@ -11,10 +18,6 @@ public class DepositRequest {
 
     public Double getValue() {
         return value;
-    }
-
-    public void setValue(Double value) {
-        this.value = value;
     }
 
 }

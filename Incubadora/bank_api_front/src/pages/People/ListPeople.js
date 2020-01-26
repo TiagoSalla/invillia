@@ -1,76 +1,71 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import axios from '../../utils/HttpClient';
 
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
+import { Button, Table } from 'react-bootstrap/';
+import BootstrapContainer from 'react-bootstrap/Container';
+import { RouterLink, Container } from '../../components/styles';
 
-class ListPeople extends Component {
-  state = {
-    people: [],
-  };
+export default function ListPeople() {
+  const [people, setPeople] = useState([]);
 
-  componentDidMount() {
-    this.searchPeople();
+  async function retrievePeople() {
+    axios.get('/people').then(({ data }) => setPeople(data));
   }
 
-  searchPeople() {
-    axios.get('/people').then(({ data }) => {
-      console.log(data);
-      this.setState({
-        people: data,
-      });
-    });
-  }
-
-  handleDelete = id => {
-    axios.delete(`/people/${id}`).then(() => this.searchPeople());
+  const handleDelete = id => {
+    axios.delete(`/people/${id}`).then(() => retrievePeople());
   };
 
-  render() {
-    return (
+  useEffect(() => {
+    retrievePeople();
+  }, []);
+
+  return (
+    <BootstrapContainer>
       <Container>
         <h1>Lista de Pessoas</h1>
-
-        <Table responsive>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nome</th>
-              <th>CPF</th>
-              <th>RG</th>
-              <th>Atualizado em</th>
-              <th>Criado em</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.people.map(person => (
-              <tr key={person.id}>
-                <td>{person.id}</td>
-                <td>{person.name}</td>
-                <td>{person.cpf}</td>
-                <td>{person.rg}</td>
-                <td>{person.updatedAt}</td>
-                <td>{person.createdAt}</td>
-                <td>
-                  <button onClick={() => this.handleDelete(person.id)}>
-                    Excluir
-                  </button>
-                  <Link to={`people/edit/${person.id}`}>Editar</Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-
-        <Button>
-          <Link to="/people/new">Adicionar Pessoa</Link>
+        <Button style={{ marginLeft: 30 }} variant="success">
+          <RouterLink to="/people/new">Adicionar Pessoa</RouterLink>
         </Button>
       </Container>
-    );
-  }
+      <Table responsive variant="dark">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>RG</th>
+            <th>Atualizado em</th>
+            <th>Criado em</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {people.map(person => (
+            <tr key={person.id}>
+              <td>{person.id}</td>
+              <td>{person.name}</td>
+              <td>{person.cpf}</td>
+              <td>{person.rg}</td>
+              <td>{person.updatedAt}</td>
+              <td>{person.createdAt}</td>
+              <td>
+                <Button variant="warning">
+                  <RouterLink to={`people/edit/${person.id}`}>
+                    Editar
+                  </RouterLink>
+                </Button>{' '}
+                <Button
+                  variant="danger"
+                  onClick={() => handleDelete(person.id)}
+                >
+                  Excluir
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </BootstrapContainer>
+  );
 }
-
-export default ListPeople;

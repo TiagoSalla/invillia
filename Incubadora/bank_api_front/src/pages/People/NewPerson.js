@@ -1,27 +1,25 @@
-import React, { Component } from 'react';
-
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import axios from '../../utils/HttpClient';
 
-import Field from '../../components/Field';
+import { RouterLink, Container } from '../../components/styles';
+import { Button, Form, Card } from 'react-bootstrap';
 
-class NewPerson extends Component {
-  state = {
-    person: {
-      name: '',
-      cpf: '',
-      rg: '',
-    },
-    errors: {},
-    globalError: '',
+export default function NewPerson(props) {
+  const [person, setPerson] = useState({
+    person: { name: '', rg: '', cpf: '' },
+  });
+  const { push } = props.history;
+
+  const handleSubmit = () => {
+    axios.post(`/people`, person.person).then(() => push('/people'));
   };
 
-  change = event => {
+  const handleChange = event => {
     const field = event.target.name;
     const { value } = event.target;
 
-    this.setState(({ person }) => ({
+    setPerson(({ person }) => ({
       person: {
         ...person,
         [field]: value,
@@ -29,70 +27,61 @@ class NewPerson extends Component {
     }));
   };
 
-  submit = event => {
-    axios
-      .post('/people', this.state.person)
-      .then(() => this.props.history.push('/people'))
-      .catch(({ response }) => {
-        if (response.status === 400) {
-          this.setState({
-            errors: response.data,
-          });
-        }
+  return (
+    <Container>
+      <Card style={{ width: '20rem' }} className="text-center">
+        <Card.Header>
+          <h1>Nova Pessoa</h1>
+        </Card.Header>
 
-        this.setState({
-          globalError: response.data.message,
-        });
-      });
-
-    event.preventDefault();
-  };
-
-  render() {
-    const { person, errors, globalError } = this.state;
-    return (
-      <div>
-        <h1>New Person</h1>
-
-        {globalError ? (
-          <div className="alert alert-danger">{globalError}</div>
-        ) : (
-          <></>
-        )}
-
-        <form onSubmit={this.submit}>
-          <Field
-            name="name"
-            label="Name"
-            value={person.name}
-            errors={errors['name']}
-            onChange={this.change}
-          />
-
-          <Field
-            name="cpf"
-            label="CPF"
-            value={person.cpf}
-            errors={errors['cpf']}
-            onChange={this.change}
-          />
-
-          <Field
-            name="rg"
-            label="RG"
-            value={person.rg}
-            errors={errors['rg']}
-            onChange={this.change}
-          />
-
-          <div>
-            <Link to="/people">Go Back</Link>
-            <button type="submit">Save</button>
-          </div>
-        </form>
-      </div>
-    );
-  }
+        <Card.Body>
+          <Container>
+            <Form>
+              <Form.Row>
+                <Form.Group controlId="formGridName">
+                  <Form.Label>Nome</Form.Label>
+                  <Form.Control
+                    name="name"
+                    value={person.name}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Form.Row>
+                <Form.Group controlId="formGridRg">
+                  <Form.Label>RG</Form.Label>
+                  <Form.Control
+                    name="rg"
+                    value={person.rg}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Form.Row>
+                <Form.Group controlId="formGridCpf">
+                  <Form.Label>CPF</Form.Label>
+                  <Form.Control
+                    name="cpf"
+                    value={person.cpf}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Button variant="danger">
+                <RouterLink to="/people">Voltar</RouterLink>
+              </Button>{' '}
+              <Button
+                variant="success"
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
+                Criar
+              </Button>
+            </Form>
+          </Container>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
 }
-
-export default NewPerson;

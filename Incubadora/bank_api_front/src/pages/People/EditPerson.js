@@ -1,104 +1,105 @@
-import React, { Component } from 'react';
-
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 import axios from '../../utils/HttpClient';
 
-import Field from '../../components/Field';
+import { RouterLink, Container } from '../../components/styles';
+import { Button, Form, Card } from 'react-bootstrap';
 
-class EditPerson extends Component {
-  state = {
-    person: {
-      name: '',
-      cpf: '',
-      rg: '',
-    },
-    errors: {},
-  };
+export default function EditPerson(props) {
+  const [person, setPerson] = useState({
+    person: { name: '', rg: '', cpf: '' },
+  });
+  const id = props.match.params.id;
+  const { push } = props.history;
+  const foundPerson = person.person;
 
-  componentDidMount() {
-    axios
-      .get(`/people/${this.searchPersonId()}`)
-      .then(({ data }) => {
-        this.setState({
-          person: data,
-        });
-      })
-      .catch(({ response }) => {
-        if (response.status === 404) {
-          this.props.history.push('/not-found');
-        }
-      });
-  }
+  const handleChange = event => {
+    const field = event.target.name;
+    const { value } = event.target;
 
-  searchPersonId = () => this.props.match.params.id;
-
-  change = event => {
-    let field = event.target.name;
-    let value = event.target.value;
-
-    this.setState(({ person }) => ({
+    setPerson(({ person }) => ({
       person: {
         ...person,
         [field]: value,
       },
     }));
+
+    console.log(person);
   };
 
-  submit = event => {
-    axios
-      .put(`/people/${this.searchPersonId()}`, this.state.person)
-      .then(() => this.props.history.push('/people'))
-      .catch(({ response }) => {
-        if (response.status === 400) {
-          this.setState({
-            errors: response.data,
-          });
-        }
+  const handleSubmit = () => {
+    axios.put(`/people/${id}`, person.person).then(() => push('/people'));
+  };
+
+  useEffect(() => {
+    async function retrievePerson() {
+      await axios.get(`/people/${id}`).then(({ data }) => {
+        const person = {
+          name: data.name,
+          rg: data.rg,
+          cpf: data.cpf,
+        };
+        setPerson({ person });
       });
+    }
+    retrievePerson();
+  }, [id]);
 
-    event.preventDefault();
-  };
+  return (
+    <Container>
+      <Card style={{ width: '20rem' }} className="text-center">
+        <Card.Header>
+          <h1>Editar Pessoa</h1>
+        </Card.Header>
 
-  render() {
-    const { person, errors } = this.state;
-    return (
-      <div>
-        <h1>New Person</h1>
-
-        <form onSubmit={this.submit}>
-          <Field
-            name="name"
-            label="Name"
-            value={person.name}
-            errors={errors['name']}
-            onChange={this.change}
-          />
-
-          <Field
-            name="cpf"
-            label="CPF"
-            value={person.cpf}
-            errors={errors['cpf']}
-            onChange={this.change}
-          />
-
-          <Field
-            name="rg"
-            label="RG"
-            value={person.rg}
-            errors={errors['rg']}
-            onChange={this.change}
-          />
-
-          <div>
-            <Link to="/people">Voltar</Link>
-            <button type="submit">Salvar</button>
-          </div>
-        </form>
-      </div>
-    );
-  }
+        <Card.Body>
+          <Container>
+            <Form>
+              <Form.Row>
+                <Form.Group controlId="formGridName">
+                  <Form.Label>Nome</Form.Label>
+                  <Form.Control
+                    name="name"
+                    value={foundPerson.name}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Form.Row>
+                <Form.Group controlId="formGridRg">
+                  <Form.Label>RG</Form.Label>
+                  <Form.Control
+                    name="rg"
+                    value={foundPerson.rg}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Form.Row>
+                <Form.Group controlId="formGridCpf">
+                  <Form.Label>CPF</Form.Label>
+                  <Form.Control
+                    name="cpf"
+                    value={foundPerson.cpf}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Button variant="danger">
+                <RouterLink to="/people">Voltar</RouterLink>
+              </Button>{' '}
+              <Button
+                variant="success"
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
+                Salvar
+              </Button>
+            </Form>
+          </Container>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
 }
-
-export default EditPerson;

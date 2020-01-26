@@ -4,9 +4,9 @@ import { RouterLink, NavRouterLink } from './styles';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-export default function SideBar() {
+export default function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar style={{ marginBottom: 20 }} bg="dark" variant="dark">
       <Navbar.Brand>
         <RouterLink to="/">
           <img

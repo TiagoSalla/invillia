@@ -1,72 +1,48 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import axios from '../../utils/HttpClient';
 
-class FindPerson extends Component {
-    state = {
-        person: {
-            id: "",
-            name: "",
-            cpf: "",
-            rg: ""
-        }
-    };
+import { Button, Table } from 'react-bootstrap/';
+import BootstrapContainer from 'react-bootstrap/Container';
+import { RouterLink, Container } from '../../components/styles';
 
-    componentDidMount() {
-        axios.get(`/people/${this.searchPersonId()}`)
-            .then(({ data }) => {
-                this.setState({
-                    person: data
-                })
-            }).catch(({ response }) => {
-                if (response.status === 404) {
-                    this.props.history.push("/not-found")
-                }
-            })
-    }
+export default function FindPerson(props) {
+  const [person, setPerson] = useState({});
+  const paramId = props.match.params.id;
 
-    searchPersonId = () => this.props.match.params.id;
+  useEffect(() => {
+    axios.get(`/people/${paramId}`).then(({ data }) => setPerson(data));
+  }, [paramId]);
 
-    handleDelete = (id) => {
-        axios.delete(`/people/${id}`)
-            .then(() => this.searchPersonId());
-    }
-
-    render() {
-        const { person } = this.state;
-        console.log(person);
-        return <div>
-            <h1>Find Person</h1>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>CPF</th>
-                        <th>RG</th>
-                        <th>Updated At</th>
-                        <th>Created At</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr key={person.id}>
-                        <td>{person.id}</td>
-                        <td>{person.name}</td>
-                        <td>{person.cpf}</td>
-                        <td>{person.rg}</td>
-                        <td>{person.updatedAt}</td>
-                        <td>{person.createdAt}</td>
-                        <td>
-                            <button onClick={() => this.handleDelete(person.id)}>Delete</button>
-                            <Link to={`people/edit/${person.id}`}>Edit</Link>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    }
+  return (
+    <BootstrapContainer>
+      <Container>
+        <h1>Pessoa Encontrada!</h1>
+      </Container>
+      <Table responsive variant="dark">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>RG</th>
+            <th>Atualizado em</th>
+            <th>Criado em</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr key={person.id}>
+            <td>{person.id}</td>
+            <td>{person.name}</td>
+            <td>{person.cpf}</td>
+            <td>{person.rg}</td>
+            <td>{person.updatedAt}</td>
+            <td>{person.createdAt}</td>
+          </tr>
+        </tbody>
+      </Table>
+      <Button variant="success">
+        <RouterLink to="/accounts">Voltar</RouterLink>
+      </Button>
+    </BootstrapContainer>
+  );
 }
-
-export default FindPerson;

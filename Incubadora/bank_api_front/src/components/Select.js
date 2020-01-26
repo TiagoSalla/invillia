@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Select() {
+export default function Select() {
   return (
     <select name="select">
       <option value="valor1">Valor 1</option>
@@ -11,5 +11,3 @@ function Select() {
     </select>
   );
 }
-
-export default Select;
